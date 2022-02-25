@@ -1,20 +1,17 @@
-package com.tallerSoftka3;
-
 /**
- *
  * @author Jairo Andres
  */
 public class SongAttibute {
+    
     private int id; 
     private String tittle; 
     private float duration; 
     private String gender; 
     private String date;
-    private String description; 
-    
-    public SongAttibute() { }
+    private String description;
 
-    public SongAttibute(int id, String tittle, float duration, String gender, String date, String description) {
+    public SongAttibute(int id, String tittle, float duration,
+        String gender, String date, String description) {
         this.id = id;
         this.tittle = tittle;
         this.duration = duration;
@@ -70,5 +67,14 @@ public class SongAttibute {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return tittle + ": Genero " + gender + ", Duracion " + duration + ", Fecha "+
+            date + ", Identificador " + id + ", Descripcion " + description;
+        
+    }
+
+       
   
 }
